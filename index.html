@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AlgoGym.online</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload" oncontextmenu="return false">
+		
+		<div id="wrapper">
+			<header id="header" class="alt">
+						<span class="logo"><img height ="20%" width="20%" src="images/logo.svg" alt="" /></span>
+						<h1>AlgoGym</h1>
+						<p>Get Started with Job Interview Preparation, by solving 2 previously asked in big tech, per week.<br /></p>
+					</header>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html" class="active">Question 1: </a></li>
+							<li><a href="index2.html"><b>Question 2: </b></a></li>
+						</ul>
+					</nav>
+					<div id="main">
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Question 1:</h2>
+										</header>
+										<p><font face="Calibri" size="+2"><i>
+										You are given a string S of length N. Q ranges of the form [L. R] in a 2D array range, and a permutation arr containing numbers from 1 to N.<br>
+
+<b>Task: <br>
+</b>
+
+In one operation, you remove the first unremoved character as per the permutation. However, the positions of other characters will not change. Determine the minimum number of operations for the remaining string to be good.
+<br><b>Notes: <br>
+</b>
+• A string is considered good if all the Q ranges have all distinct
+
+characters. Removed characters are not counted.
+
+A range with all characters removed is considered to have all
+
+distinct characters.<br>
+
+• The sequence of n integers is called a permutation if it contains all integers from 1 to n exactly once.<br>
+
+• 1-based indexing is followed.
+<br><br>
+
+
+Example<br>
+
+Assumptions<br>
+
+N=5, Q=2, S = "aaaaa" arr=[2, 4, 1, 3, 5]<br>
+
+• ranges = [[1.2][4.5]]<br>
+<br>
+<b>Approach:</b><br>
+
+After the first operation, the string becomes a_aaa<br><br>
+
+After the second operation, the string becomes a_a_a<br><br>
+
+Now, in both ranges, all characters are distinct.<br><br>
+
+Hence, the output is 2.<br><br>
+<br>
+<b>Function description</b><br>
+
+Complete the goodString function provided in the editor. This function takes the following 6 parameters and returns the minimum number of operations:<br>
+
+• N. Represents the length of the string<br>
+
+• S: Represents the string<br>
+• arr: Represents the permutation according to which characters will be removed.<br>
+
+• Q. Represents the number of ranges.<br>
+
+• ranges: Represents an array of 2 Integer arrays describing the ranges [L. R] which should have all distinct characters.<br>
+
+Input format<br>
+
+Note: This is the input format that you must use to provide custom input (available above the Compile and Test button).<br>
+
+• The first line contains a single integer T denoting the number of test cases. Talso specifies the number of times you have to run the goodString function on a different set of inputs.<br>
+
+. For each test case:<br>
+
+The first line contains 2 space-separated integers N and Q<br>
+
+The second line contains the string S.<br>
+
+The third line contains N space-separated integers denoting the permutation arr.<br>
+
+Each of the Q following lines contains 2 space-separated integers describing the range, L and R.<br>
+
+For each test case, print a single integer in a single line denoting the minimum number of operations required for the remaining string to be good.<br>
+<br>
+Constraints<br>
+
+1≤T≤ 10<br>
+
+1≤ N ≤ 105<br>
+
+1< arr; ≤ N<br>
+
+1≤4 R ≤ N<br>
+<br>
+The string S only has lowercase English alphabets.
+<br>
+
+
+Input<br>
+1
+<br>
+8 3
+<br>
+abbabaab
+<br>
+6 35 1 4 2 7 8
+<br>
+13<br>
+
+47<br>
+35<br>
+<br>
+<b>Output:</b> <br>
+5<br>
+<br>
+
+Explanation<br>
+
+The first line contains the number of test cases, T = 1
+<br>
+The first test case
+<br>
+Given
+<br>
+N=8, Q=3, S = "abbabaab"
+<br>
+arr=[6, 3, 5, 1, 4, 2, 7, 8]
+<br>
+• ranges = [[1, 3], [4. 7], [3, 5]]
+<br>
+<b>Approach</b>
+<br>
+• After the first operation, the string becomes abbab_ab . 
+<br>
+After the second operation, the string becomes ab_ab_ab .
+<br> 
+. After the third operation, the string becomes ab_a__ab .
+<br>
+After the fourth operation, the string . After the fifth operation, the string becomes _b_a__ab .
+<br>
+After fifth operation, _b_____ab .
+<br>
+
+Now, in all the ranges, all characters are distinct.
+
+Hence, the output is 5.</p>
+										
+									</div>
+								</div>
+							</section>
+							
+					</footer>
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

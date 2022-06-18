@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AlgoGym.online</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload" oncontextmenu="return false">
+		
+		<div id="wrapper">
+			<header id="header" class="alt">
+						<span class="logo"><img height ="20%" width="20%" src="images/logo.svg" alt="" /></span>
+						<h1>AlgoGym</h1>
+						<p>Get Started with Job Interview Preparation, by solving 2 previously asked in big tech, per week.<br /></p>
+					</header>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Question 1: </a></li>
+							<li><a href="index2.html" class="active"><b>Question 2: </b></a></li>
+						</ul>
+					</nav>
+					<div id="main">
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Question 2:</h2>
+										</header>
+										<p><font face="Calibri" size="+2"><i>
+										There are N provinces [1. 2... N]. King Bob wants to create his kingdom. For this, he needs to capture some provinces. Two provinces can be connected by water, land, or by both. A pair of provinces are connected by land and B pairs of provinces are connected by water. Since bob's navy is very weak, he does not want any of his captured provinces to be connected by water, moreover. Bob has a strong army, so he wants to capture every province that is connected to his kingdom by land.
+										<br><br>
+More formally, the following conditions must be satisfied:<br>
+
+• For each captured province every province connected to it by land should also be captured.<br>
+
+• No two provinces captured should be connected by water directly or by any other provinces.
+<br>
+• Any two captured provinces should be connected directly or through other captured provinces.<br>
+<br>
+<b>Task</b>
+<br>
+Output the maximum number of provinces that Bob can capture satisfying the given conditions. If bob can't capture any province then output 0.
+<br>
+<b>Example</b>
+<br><br>
+<b>Assumptions</b>
+<br>
+• T=1<br>
+• N=5<br>
+• A=2<br>
+• B=1<br>
+• land = [[1, 2], [2, 3]]<br>
+
+• water = [[1, 3]]<br>
+<br>
+<b>Approach</b><br>
+
+• Province 1 is connected to province 2 by land, province 1 is connected to province 3 by water, and province 2 is connected to 3 by land.
+<br>
+Following provinces can be captured [4], [5].<br>
+Group of provinces [1, 2, 3] can't be captured because 1 and 3 are connected by water.
+<br>
+Therefore the minimum number of provinces that can be captured is 1.<br>
+<br>
+<b>Function description</b><br>
+
+Complete the function solve() provided in the editor. This function takes the following five parameters and returns the required answer:<br>
+
+• N. Represents the number of provinces<br>
+
+• A: Represents the number of provinces connected by land
+<br>
+• B. Represents the number of provinces connected by water.<br> 
+• land[A][2] land[i][0] and land[1][1] represent that these provinces are connected by land.<br>
+
+• water[B][2] water[i][0] and water[i][1] represent that these provinces are connected by water. <br>
+<br>
+<b>Input format</b><br>
+<b>Note</b>: This is the input format that you must use to provide customi Input (available above the Compile and Test button).<br>
+
+The first line contains T, the number of test cases. T also specifies the number of times you have to run the solve function on a different set of inputs.<br>
+
+. For each test case:<br>
+
+The first line contains N, the number of provinces.
+<br>
+The second line contains A, the number of pairs of provinces connected by land.
+<br>
+The third line contains B, the number of pairs of provinces connected by water.
+<br>
+The next A lines contain two space-separated integers i.e. two provinces connected by land. The next B lines contain two space-separated integers i.e. two provinces connected by water.<br>
+<br>
+<b>Output format</b><br>
+
+For each test case in a new line. print the answer.
+<br><br>
+<b>Constraints</b><br>
+1≤T≤ 100<br>
+
+1 ≤ N ≤105 0≤A+B≤N
+<br>
+1 ≤ land[i], water[i] < N<br>
+
+A, B≥ 0
+<br><br>
+
+<b>Sample Input:</b>
+<br>
+1<br>
+5<br>
+1<br>
+2<br>
+1 2 <br>
+1 3 <br>
+3 2<br>
+<br>
+Output: <br>
+1<br>
+
+<br>
+<b>Explanation</b><br>
+
+The first line contains the number of test cases, T=1.<br>
+
+The first test case<br>
+
+Given<br>
+
+•T=1<br>
+
+• N=5<br>
+
+• A=2<br>
+
+• B=1<br>
+
+• land = [[1, 2]]<br>
+
+• water = [[1, 3], [3,2]]<br>
+<br><br>
+<b>Approach</b><br>
+
+• Province 1 is connected to province 2 by land and province 1 is connected to province 3 by water and province 3 is connected to province 2 by water.<br>
+
+The maximum group of provinces connected by land is 2 ie, [1, 2] by since province 1 is connected to province 3 by water and province 3 is connected to province 2 by water, therefore provinces 1 and 2 are indirectly connected by water, therefore we can't take this group.<br>
+Therefore the maximum number of provinces that can be captured is 1. [3] [4] [5] .<br>
+										</p>
+										
+									</div>
+								</div>
+							</section>
+							
+					</footer>
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
